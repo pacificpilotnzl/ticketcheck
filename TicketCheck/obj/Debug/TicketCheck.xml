@@ -1,0 +1,106 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TicketCheck
+</name>
+</assembly>
+<members>
+<member name="T:TicketCheck.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.AboutInformation">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_configticket">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_databasecreate">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_databaseopen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_databasesave">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_delticket">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_fromexcel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_help">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_newticket">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_preferences">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_properties">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_refresh">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.icn_scan">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.img_lock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.ReleaseVersion">
+<summary>
+  Looks up a localized string similar to S.1.011.
+</summary>
+</member>
+<member name="P:TicketCheck.My.Resources.Resources.SoftwareID">
+<summary>
+  Looks up a localized string similar to pbyw.ticketcheck.a.
+</summary>
+</member>
+</members>
+</doc>
