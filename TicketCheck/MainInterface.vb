@@ -219,4 +219,8 @@ Public Class MainInterface
             MsgBox("Cancelled loading file.")
         End If
     End Sub
+
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        Mains.SaveFile("")
+    End Sub
 End Class

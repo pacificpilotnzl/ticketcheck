@@ -23,11 +23,6 @@ Partial Class MainInterface
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainInterface))
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("ItemA")
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("fdgdsfgsdg")
-        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("TESTB")
-        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("TESTC")
-        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("")
         Me.BuildString = New System.Windows.Forms.Label()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewDatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -462,7 +457,6 @@ Partial Class MainInterface
         Me.TicketListFront.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TicketListFront.FullRowSelect = True
         Me.TicketListFront.HideSelection = False
-        Me.TicketListFront.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4, ListViewItem5})
         Me.TicketListFront.Location = New System.Drawing.Point(0, 0)
         Me.TicketListFront.Name = "TicketListFront"
         Me.TicketListFront.Size = New System.Drawing.Size(896, 620)
@@ -659,7 +653,7 @@ Partial Class MainInterface
         Me.KeyPreview = True
         Me.MainMenuStrip = Me.TitleMenuStrip
         Me.Name = "MainInterface"
-        Me.Text = " "
+        Me.Text = " TicketCheck"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TitleMenuStrip.ResumeLayout(False)
         Me.TitleMenuStrip.PerformLayout()

@@ -1,5 +1,28 @@
 ﻿Imports Microsoft.WindowsAPICodePack.Dialogs
 Public Class MainClass
+
+    Public Sub SaveFile(ByVal Path As String)
+        Dim FileDataRaw As String
+        FileDataRaw = "file-name=" & My.Settings.FileName
+        FileDataRaw += vbNewLine & "file-author=" & My.Settings.FileAuthor
+        FileDataRaw += vbNewLine & "file-created=" & My.Settings.FileCreated
+        FileDataRaw += vbNewLine & "file-tickets=" & My.Settings.FileTickets
+
+        MsgBox(My.Settings.FileCryptoKey)
+
+        Dim WrapperService As New CryptograpghyService(My.Settings.FileCryptoKey)
+
+        MsgBox(FileDataRaw)
+
+        Dim WrittenData = "<tcdx>"
+        Dim EncryptedData = WrapperService.EncryptData(FileDataRaw)
+
+        WrittenData += (EncryptedData)
+        My.Computer.FileSystem.WriteAllText(My.Computer.FileSystem.SpecialDirectories.Desktop & "\filedat.tcdx", WrittenData, False)
+        MsgBox("Done!")
+
+    End Sub
+
     Public Sub Init()
         My.Settings.SoftwareLog = "TicketCheck Version " & My.Resources.ReleaseVersion & "Starting..." & "$$" & "Log started " & DateTime.Now.ToShortTimeString & " " & DateTime.Now.ToShortDateString & "$$"
         MainInterface.BuildString.Visible = My.Settings.ShowBuildString
@@ -55,6 +78,8 @@ RedoKey:
     Public Sub LoadRawData(ByVal Input As String, ByVal Path As String)
         Dim Properties = Input.Split(vbNewLine)
 
+        My.Settings.FileName = "Untitled"
+
         For Each FileProperty As String In Properties
             Try
                 Dim ObjectProp = FileProperty.Split("=")
@@ -75,11 +100,6 @@ RedoKey:
                 If ObjectProp(0).Contains("file-tickets") = True Then
                     My.Settings.FileTickets = ObjectProp(1)
                 End If
-
-                MainInterface.Text = "TicketCheck - " & My.Settings.FileName & " (" & Path & ")"
-                MainInterface.FilterTextBox.Clear()
-                MainInterface.TicketListFront.Items.Clear()
-                LoadTickets()
             Catch
                 Dim ErrorDialog As New TaskDialog
                 ErrorDialog.Caption = "Broken File"
@@ -90,6 +110,11 @@ RedoKey:
                 Return
             End Try
         Next
+
+        MainInterface.Text = "TicketCheck - " & My.Settings.FileName & " (" & Path & ")"
+        MainInterface.FilterTextBox.Clear()
+        MainInterface.TicketListFront.Items.Clear()
+        LoadTickets()
 
     End Sub
 
