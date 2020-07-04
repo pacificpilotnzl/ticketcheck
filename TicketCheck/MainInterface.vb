@@ -193,20 +193,6 @@ Public Class MainInterface
         FilterList(True)
     End Sub
 
-    Private Sub EncryptBtn_Click(sender As Object, e As EventArgs) Handles EncryptBtn.Click
-        Dim WrapperService As New CryptograpghyService(EncryptKey.Text)
-        EncryptOutput.Text = WrapperService.EncryptData(EncryptData.Text)
-    End Sub
-
-    Private Sub DecryptBtn_Click(sender As Object, e As EventArgs) Handles DecryptBtn.Click
-        Try
-            Dim WrapperService As New CryptograpghyService(DecryptKey.Text)
-            DecryptOutput.Text = WrapperService.DecryptData(DecryptData.Text)
-        Catch ex As Exception
-            DecryptOutput.Text = "Nada! Cant be decrypted."
-        End Try
-    End Sub
-
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs)
         EncryptionFileRequest.Show()
     End Sub
@@ -222,5 +208,13 @@ Public Class MainInterface
 
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
         Mains.SaveFile("")
+    End Sub
+
+    Private Sub CryptoTestingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CryptoTestingToolStripMenuItem.Click
+        EncryptionTestForm.Show()
+    End Sub
+
+    Private Sub NewTicketButton_Click(sender As Object, e As EventArgs) Handles NewTicketButton.Click
+        NewTicket.Show()
     End Sub
 End Class

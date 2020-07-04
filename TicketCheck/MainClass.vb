@@ -3,10 +3,10 @@ Public Class MainClass
 
     Public Sub SaveFile(ByVal Path As String)
         Dim FileDataRaw As String
-        FileDataRaw = "file-name=" & My.Settings.FileName
-        FileDataRaw += vbNewLine & "file-author=" & My.Settings.FileAuthor
-        FileDataRaw += vbNewLine & "file-created=" & My.Settings.FileCreated
-        FileDataRaw += vbNewLine & "file-tickets=" & My.Settings.FileTickets
+        FileDataRaw = "filename=" & My.Settings.FileName
+        FileDataRaw += "%" & "fileauthor=" & My.Settings.FileAuthor
+        FileDataRaw += "%" & "filecreated=" & My.Settings.FileCreated
+        FileDataRaw += "%" & "filetickets=" & My.Settings.FileTickets
 
         MsgBox(My.Settings.FileCryptoKey)
 
@@ -76,7 +76,7 @@ RedoKey:
     End Sub
 
     Public Sub LoadRawData(ByVal Input As String, ByVal Path As String)
-        Dim Properties = Input.Split(vbNewLine)
+        Dim Properties = Input.Split("%")
 
         My.Settings.FileName = "Untitled"
 
@@ -85,20 +85,21 @@ RedoKey:
                 Dim ObjectProp = FileProperty.Split("=")
                 My.Settings.FilePath = Path
 
-                If ObjectProp(0).Contains("file-name") = True Then
+                If ObjectProp(0).Contains("filename") = True Then
                     My.Settings.FileName = ObjectProp(1)
                 End If
 
-                If ObjectProp(0).Contains("file-author") = True Then
+                If ObjectProp(0).Contains("fileauthor") = True Then
                     My.Settings.FileAuthor = ObjectProp(1)
                 End If
 
-                If ObjectProp(0).Contains("file-created") = True Then
+                If ObjectProp(0).Contains("filecreated") = True Then
                     My.Settings.FileCreated = ObjectProp(1)
                 End If
 
-                If ObjectProp(0).Contains("file-tickets") = True Then
+                If ObjectProp(0).Contains("filetickets") = True Then
                     My.Settings.FileTickets = ObjectProp(1)
+                    MsgBox("Set file tickets")
                 End If
             Catch
                 Dim ErrorDialog As New TaskDialog
@@ -119,21 +120,21 @@ RedoKey:
     End Sub
 
     Public Sub LoadTickets()
+        MsgBox(My.Settings.FileTickets)
         Dim IndividalTickets As Array = My.Settings.FileTickets.Split("^")
+        MsgBox(IndividalTickets.Length)
         For Each Ticket As String In IndividalTickets
             Dim TicketProperties As Array = Ticket.Split("|")
             Dim NewListItem As New ListViewItem
             NewListItem.Text = TicketProperties(0) 'Ticket Numer
-            NewListItem.SubItems.Add(TicketProperties(1))  'Issue Time
-            NewListItem.SubItems.Add(TicketProperties(2))  'Status
-            NewListItem.SubItems.Add(TicketProperties(3))  'Service
-            NewListItem.SubItems.Add(TicketProperties(4))  'Holder
-            NewListItem.SubItems.Add(TicketProperties(5))  'Company
-            NewListItem.SubItems.Add(TicketProperties(6))  'Seat
-            NewListItem.SubItems.Add(TicketProperties(7))  'Location
-            NewListItem.SubItems.Add(TicketProperties(8))  'Valid From
-            NewListItem.SubItems.Add(TicketProperties(9))  'Valid To
-            NewListItem.SubItems.Add(TicketProperties(10)) 'Price
+            NewListItem.SubItems.Add(TicketProperties(1)) 'Issue Time
+            NewListItem.SubItems.Add(TicketProperties(2)) 'Status
+            NewListItem.SubItems.Add(TicketProperties(3)) 'Service
+            NewListItem.SubItems.Add(TicketProperties(4)) 'Holder
+            NewListItem.SubItems.Add(TicketProperties(5)) 'Company
+            NewListItem.SubItems.Add(TicketProperties(6)) 'Seat
+            NewListItem.SubItems.Add(TicketProperties(7)) 'Location
+            NewListItem.SubItems.Add(TicketProperties(8)) 'Price
             MainInterface.TicketListFront.Items.Add(NewListItem)
         Next
     End Sub

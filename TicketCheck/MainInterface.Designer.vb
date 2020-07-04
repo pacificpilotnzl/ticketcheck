@@ -55,6 +55,7 @@ Partial Class MainInterface
         Me.SetTCDXFileAssociationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReviewTCDXFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DecryptPasswordDialogRequestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CryptoTestingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WidthMenuItemHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.TitleMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.ToolMenu = New System.Windows.Forms.ToolStrip()
@@ -76,28 +77,11 @@ Partial Class MainInterface
         Me.CompanyColumn = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SeatColumn = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.LocationColumn = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ValidFromColumn = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ValidToColumn = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.PriceColumn = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.DecryptOutput = New System.Windows.Forms.TextBox()
-        Me.DecryptBtn = New System.Windows.Forms.Button()
-        Me.DecryptData = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.DecryptKey = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.EncryptOutput = New System.Windows.Forms.TextBox()
-        Me.EncryptBtn = New System.Windows.Forms.Button()
-        Me.EncryptData = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.EncryptKey = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextLabel = New System.Windows.Forms.Label()
-        Me.InstructionLabel = New System.Windows.Forms.Label()
         Me.TitleMenuStrip.SuspendLayout()
         Me.ToolMenu.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
-        Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -293,7 +277,7 @@ Partial Class MainInterface
         '
         'DebugItemsToolStripMenuItem
         '
-        Me.DebugItemsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SetTCDXFileAssociationToolStripMenuItem, Me.ReviewTCDXFileToolStripMenuItem, Me.DecryptPasswordDialogRequestToolStripMenuItem})
+        Me.DebugItemsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SetTCDXFileAssociationToolStripMenuItem, Me.ReviewTCDXFileToolStripMenuItem, Me.DecryptPasswordDialogRequestToolStripMenuItem, Me.CryptoTestingToolStripMenuItem})
         Me.DebugItemsToolStripMenuItem.Name = "DebugItemsToolStripMenuItem"
         Me.DebugItemsToolStripMenuItem.Size = New System.Drawing.Size(224, 22)
         Me.DebugItemsToolStripMenuItem.Text = "Debug &Items"
@@ -315,6 +299,12 @@ Partial Class MainInterface
         Me.DecryptPasswordDialogRequestToolStripMenuItem.Name = "DecryptPasswordDialogRequestToolStripMenuItem"
         Me.DecryptPasswordDialogRequestToolStripMenuItem.Size = New System.Drawing.Size(250, 22)
         Me.DecryptPasswordDialogRequestToolStripMenuItem.Text = "Decrypt Password Dialog Request"
+        '
+        'CryptoTestingToolStripMenuItem
+        '
+        Me.CryptoTestingToolStripMenuItem.Name = "CryptoTestingToolStripMenuItem"
+        Me.CryptoTestingToolStripMenuItem.Size = New System.Drawing.Size(250, 22)
+        Me.CryptoTestingToolStripMenuItem.Text = "Crypto Testing"
         '
         'WidthMenuItemHelp
         '
@@ -432,20 +422,6 @@ Partial Class MainInterface
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.BackColor = System.Drawing.Color.White
-        Me.SplitContainer1.Panel2.Controls.Add(Me.DecryptOutput)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.DecryptBtn)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.DecryptData)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Label3)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.DecryptKey)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Label4)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.EncryptOutput)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.EncryptBtn)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.EncryptData)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Label2)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.EncryptKey)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Label1)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.TextLabel)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.InstructionLabel)
         Me.SplitContainer1.Size = New System.Drawing.Size(1264, 624)
         Me.SplitContainer1.SplitterDistance = 900
         Me.SplitContainer1.TabIndex = 6
@@ -453,7 +429,7 @@ Partial Class MainInterface
         'TicketListFront
         '
         Me.TicketListFront.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TicketListFront.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.TicketNumberColumn, Me.IssueTimeColumn, Me.StatusColumn, Me.ServiceColumn, Me.HolderColumn, Me.CompanyColumn, Me.SeatColumn, Me.LocationColumn, Me.ValidFromColumn, Me.ValidToColumn, Me.PriceColumn})
+        Me.TicketListFront.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.TicketNumberColumn, Me.IssueTimeColumn, Me.StatusColumn, Me.ServiceColumn, Me.HolderColumn, Me.CompanyColumn, Me.SeatColumn, Me.LocationColumn, Me.PriceColumn})
         Me.TicketListFront.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TicketListFront.FullRowSelect = True
         Me.TicketListFront.HideSelection = False
@@ -504,140 +480,10 @@ Partial Class MainInterface
         Me.LocationColumn.Text = "Location"
         Me.LocationColumn.Width = 75
         '
-        'ValidFromColumn
-        '
-        Me.ValidFromColumn.Text = "Valid from"
-        Me.ValidFromColumn.Width = 100
-        '
-        'ValidToColumn
-        '
-        Me.ValidToColumn.Text = "Valid to"
-        Me.ValidToColumn.Width = 100
-        '
         'PriceColumn
         '
         Me.PriceColumn.Text = "Paid"
         Me.PriceColumn.Width = 75
-        '
-        'DecryptOutput
-        '
-        Me.DecryptOutput.Location = New System.Drawing.Point(89, 235)
-        Me.DecryptOutput.Multiline = True
-        Me.DecryptOutput.Name = "DecryptOutput"
-        Me.DecryptOutput.Size = New System.Drawing.Size(192, 23)
-        Me.DecryptOutput.TabIndex = 16
-        '
-        'DecryptBtn
-        '
-        Me.DecryptBtn.Location = New System.Drawing.Point(13, 235)
-        Me.DecryptBtn.Name = "DecryptBtn"
-        Me.DecryptBtn.Size = New System.Drawing.Size(75, 25)
-        Me.DecryptBtn.TabIndex = 15
-        Me.DecryptBtn.Text = "Decrypt"
-        Me.DecryptBtn.UseVisualStyleBackColor = True
-        '
-        'DecryptData
-        '
-        Me.DecryptData.Location = New System.Drawing.Point(106, 207)
-        Me.DecryptData.Multiline = True
-        Me.DecryptData.Name = "DecryptData"
-        Me.DecryptData.Size = New System.Drawing.Size(175, 23)
-        Me.DecryptData.TabIndex = 14
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(11, 210)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 15)
-        Me.Label3.TabIndex = 13
-        Me.Label3.Text = "Data to Decrypt:"
-        '
-        'DecryptKey
-        '
-        Me.DecryptKey.Location = New System.Drawing.Point(106, 179)
-        Me.DecryptKey.Name = "DecryptKey"
-        Me.DecryptKey.Size = New System.Drawing.Size(175, 23)
-        Me.DecryptKey.TabIndex = 12
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(11, 182)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(89, 15)
-        Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Encryption Key:"
-        '
-        'EncryptOutput
-        '
-        Me.EncryptOutput.Location = New System.Drawing.Point(89, 131)
-        Me.EncryptOutput.Multiline = True
-        Me.EncryptOutput.Name = "EncryptOutput"
-        Me.EncryptOutput.Size = New System.Drawing.Size(192, 23)
-        Me.EncryptOutput.TabIndex = 10
-        '
-        'EncryptBtn
-        '
-        Me.EncryptBtn.Location = New System.Drawing.Point(13, 131)
-        Me.EncryptBtn.Name = "EncryptBtn"
-        Me.EncryptBtn.Size = New System.Drawing.Size(75, 25)
-        Me.EncryptBtn.TabIndex = 9
-        Me.EncryptBtn.Text = "Encrypt"
-        Me.EncryptBtn.UseVisualStyleBackColor = True
-        '
-        'EncryptData
-        '
-        Me.EncryptData.Location = New System.Drawing.Point(106, 103)
-        Me.EncryptData.Multiline = True
-        Me.EncryptData.Name = "EncryptData"
-        Me.EncryptData.Size = New System.Drawing.Size(175, 23)
-        Me.EncryptData.TabIndex = 8
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(11, 106)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 15)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Data to Encrypt:"
-        '
-        'EncryptKey
-        '
-        Me.EncryptKey.Location = New System.Drawing.Point(106, 75)
-        Me.EncryptKey.Name = "EncryptKey"
-        Me.EncryptKey.Size = New System.Drawing.Size(175, 23)
-        Me.EncryptKey.TabIndex = 6
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 78)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 15)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Encryption Key:"
-        '
-        'TextLabel
-        '
-        Me.TextLabel.AutoSize = True
-        Me.TextLabel.Location = New System.Drawing.Point(11, 47)
-        Me.TextLabel.Name = "TextLabel"
-        Me.TextLabel.Size = New System.Drawing.Size(165, 15)
-        Me.TextLabel.TabIndex = 4
-        Me.TextLabel.Text = "Debug the encryption system."
-        '
-        'InstructionLabel
-        '
-        Me.InstructionLabel.AutoSize = True
-        Me.InstructionLabel.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.InstructionLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.InstructionLabel.Location = New System.Drawing.Point(9, 12)
-        Me.InstructionLabel.Name = "InstructionLabel"
-        Me.InstructionLabel.Size = New System.Drawing.Size(181, 20)
-        Me.InstructionLabel.TabIndex = 3
-        Me.InstructionLabel.Text = "String Encryption (Debug)"
         '
         'MainInterface
         '
@@ -660,8 +506,6 @@ Partial Class MainInterface
         Me.ToolMenu.ResumeLayout(False)
         Me.ToolMenu.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
-        Me.SplitContainer1.Panel2.ResumeLayout(False)
-        Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -719,23 +563,8 @@ Partial Class MainInterface
     Friend WithEvents CompanyColumn As ColumnHeader
     Friend WithEvents SeatColumn As ColumnHeader
     Friend WithEvents LocationColumn As ColumnHeader
-    Friend WithEvents ValidFromColumn As ColumnHeader
-    Friend WithEvents ValidToColumn As ColumnHeader
     Friend WithEvents PriceColumn As ColumnHeader
-    Friend WithEvents TextLabel As Label
-    Friend WithEvents InstructionLabel As Label
-    Friend WithEvents DecryptOutput As TextBox
-    Friend WithEvents DecryptBtn As Button
-    Friend WithEvents DecryptData As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents DecryptKey As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents EncryptOutput As TextBox
-    Friend WithEvents EncryptBtn As Button
-    Friend WithEvents EncryptData As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents EncryptKey As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents DecryptPasswordDialogRequestToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents CryptoTestingToolStripMenuItem As ToolStripMenuItem
 End Class

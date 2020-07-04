@@ -16,3 +16,5 @@ C:\Users\willi\source\repos\TicketCheck\TicketCheck\obj\Debug\TicketCheck.xml
 C:\Users\willi\source\repos\TicketCheck\TicketCheck\obj\Debug\TicketCheck.pdb
 C:\Users\willi\source\repos\TicketCheck\TicketCheck\obj\Debug\TicketCheck.vbprojAssemblyReference.cache
 C:\Users\willi\source\repos\TicketCheck\TicketCheck\obj\Debug\TicketCheck.EncryptionFileRequest.resources
+C:\Users\willi\source\repos\TicketCheck\TicketCheck\obj\Debug\TicketCheck.EncryptionTestForm.resources
+C:\Users\willi\source\repos\TicketCheck\TicketCheck\obj\Debug\TicketCheck.NewTicket.resources

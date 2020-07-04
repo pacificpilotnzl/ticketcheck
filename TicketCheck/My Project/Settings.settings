@@ -30,7 +30,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="BuildString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">TicketCheck Testing Build 01070 [For Testing Use Only]</Value>
+      <Value Profile="(Default)">TicketCheck Testing Build 4070 [For Testing Use Only]</Value>
     </Setting>
     <Setting Name="FileData" Type="System.String" Scope="User">
       <Value Profile="(Default)">NoInput</Value>

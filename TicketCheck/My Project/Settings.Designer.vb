@@ -164,7 +164,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("TicketCheck Testing Build 01070 [For Testing Use Only]")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("TicketCheck Testing Build 4070 [For Testing Use Only]")>  _
         Public Property BuildString() As String
             Get
                 Return CType(Me("BuildString"),String)
